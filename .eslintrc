@@ -1,6 +1,6 @@
 {
   "extends": ["next", "next/core-web-vitals", "prettier"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
   "settings": {
     "root": true,
     "import/parsers": {
@@ -17,7 +17,7 @@
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "jsx-a11y/anchor-is-valid": 0,
-    "no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "error",
     "react/function-component-definition": [
       2,
       {
