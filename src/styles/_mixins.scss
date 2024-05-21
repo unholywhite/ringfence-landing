@@ -1,0 +1,80 @@
+@use 'media';
+
+@mixin side-paddings {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include media.tablet-landscape {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @include media.desktop {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@mixin ellipse-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin truncate-multiline($lineCount) {
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-box-orient: vertical;
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  display: -webkit-box;
+  -webkit-line-clamp: $lineCount;
+  overflow: hidden;
+}
+
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin centralize {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin clamp-lines($lines) {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  display: -webkit-box;
+  line-clamp: $lines;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+@mixin page-appear {
+  animation: appear 0.6s ease-out;
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin block-appear {
+  animation: appear 0.3s ease-out;
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

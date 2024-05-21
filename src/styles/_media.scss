@@ -1,0 +1,36 @@
+// mobile >=
+$breakpoint-xs: 380;
+
+// tablet-portrait >=
+$breakpoint-sm: 640;
+
+// tablet-landscape >=
+$breakpoint-md: 960;
+
+// desktop >=
+$breakpoint-lg: 1440;
+
+// breakpoints cascading
+@mixin mobile {
+  @media (min-width: #{$breakpoint-xs}px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{$breakpoint-sm}px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$breakpoint-md}px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-lg}px) {
+    @content;
+  }
+}
