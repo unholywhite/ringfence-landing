@@ -1,4 +1,5 @@
 @import '@styles/mixins';
+@import "@styles/media";
 @import '@styles/typography';
 
 .root {
@@ -11,12 +12,10 @@
 }
 
 .title {
-  @include display-m;
   margin: 20px;
 }
 
 .text {
-  @include body-l;
   margin: 20px;
 }
 
@@ -29,7 +28,6 @@
 }
 
 .iconWrapper {
-  @include caption;
   @include centralize;
   flex-direction: column;
   row-gap: 12px;

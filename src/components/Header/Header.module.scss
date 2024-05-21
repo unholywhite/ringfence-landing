@@ -1,3 +1,76 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+$header-height: 80px;
+
 .root {
+  @include body-xxs;
+
+  top: -1px;
+  position: sticky;
+
+  background-color: transparent;
+  transition: background-color .4s;
+}
+
+.pinned {
+  background-color: var(--transparent-dark-green-50);
+}
+
+.root.open {
+  background-color: transparent;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: $header-height;
+  padding-left: 16px;
+
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include desktop {
+    padding: 0 34px;
+  }
+}
+
+.burgerContainer {
+  padding: 16px;
+}
+
+.burger {
+  @include tablet-landscape {
+    display: none;
+  }
+}
+
+.dropdown {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+
+  background-color: var(--transparent-dark-green-90);
+}
+
+.desktopNav {
+  gap: 24px;
+  display: none;
+
+  @include tablet-landscape {
+    display: flex;
+  }
+}
+
+.mobileNav {
+  gap: 32px;
+  display: grid;
+
+  text-align: center;
+  padding: $header-height + 32px 0 32px;
+  border-bottom: 1px solid var(--primary-green);
 }
