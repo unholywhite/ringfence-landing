@@ -1,45 +1,9 @@
-@mixin display-l {
-  font-family: var(--font-primary);
-  font-size: 128px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
-
-%display-l {
-  @include display-l;
-}
-
-@mixin display-m {
-  font-family: var(--font-primary);
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
-
-%display-m {
-  @include display-m;
-}
-
-@mixin display-s {
+@mixin heading1 {
   font-family: var(--font-primary);
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
-}
-
-%display-s {
-  @include display-s;
-}
-
-@mixin heading1 {
-  font-family: var(--font-primary);
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
+  line-height: 140%;
 }
 
 %heading1 {
@@ -48,10 +12,10 @@
 
 @mixin heading2 {
   font-family: var(--font-primary);
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 140%;
 }
 
 %heading2 {
@@ -60,10 +24,10 @@
 
 @mixin heading3 {
   font-family: var(--font-primary);
-  font-size: 32px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 140%;
 }
 
 %heading3 {
@@ -72,10 +36,10 @@
 
 @mixin heading4 {
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 140%;
 }
 
 %heading4 {
@@ -84,10 +48,10 @@
 
 @mixin heading5 {
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 28px;
 }
 
 %heading5 {
@@ -96,10 +60,10 @@
 
 @mixin heading6 {
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 140%;
 }
 
 %heading6 {
@@ -108,7 +72,7 @@
 
 @mixin heading7 {
   font-family: var(--font-primary);
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
@@ -116,6 +80,30 @@
 
 %heading7 {
   @include heading7;
+}
+
+@mixin heading8 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+%heading8 {
+  @include heading8;
+}
+
+@mixin heading9 {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+%heading9 {
+  @include heading9;
 }
 
 @mixin body-l {
@@ -132,10 +120,10 @@
 
 @mixin body-m {
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 140%;
 }
 
 %body-m {
@@ -144,60 +132,36 @@
 
 @mixin body-s {
   font-family: var(--font-primary);
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 140%;
 }
 
 %body-s {
   @include body-s;
 }
 
-@mixin button-l {
+@mixin body-xs {
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
+  font-weight: 400;
+  line-height: 140%;
 }
 
-%button-l {
-  @include button-l;
+%body-xs {
+  @include body-xs;
 }
 
-@mixin button-m {
+@mixin body-xxs {
   font-family: var(--font-primary);
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-}
-
-%button-m {
-  @include button-m;
-}
-
-@mixin button-s {
-  font-family: var(--font-primary);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-}
-
-%button-s {
-  @include button-s;
-}
-
-@mixin caption {
-  font-family: var(--font-primary);
-  font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 140%;
 }
 
-%caption {
-  @include caption;
+%body-xxs {
+  @include body-xxs;
 }
