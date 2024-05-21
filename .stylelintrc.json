@@ -1,0 +1,25 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": null,
+    "selector-class-pattern": null,
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "declaration-empty-line-before": null,
+    "font-family-no-duplicate-names": null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": [
+          "custom-elements"
+        ]
+      }
+    ]
+  }
+}

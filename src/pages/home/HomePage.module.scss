@@ -1,0 +1,36 @@
+@import '@styles/mixins';
+@import '@styles/typography';
+
+.root {
+  padding-top: 80px;
+}
+
+.logo {
+  margin: 32px;
+  width: 166px;
+}
+
+.title {
+  @include display-m;
+  margin: 20px;
+}
+
+.text {
+  @include body-l;
+  margin: 20px;
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+
+.iconWrapper {
+  @include caption;
+  @include centralize;
+  flex-direction: column;
+  row-gap: 12px;
+}
