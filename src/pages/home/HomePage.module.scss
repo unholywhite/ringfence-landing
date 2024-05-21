@@ -12,11 +12,26 @@
 }
 
 .title {
+  @include heading3;
   margin: 20px;
+
+  @include tablet-landscape {
+    @include heading1;
+  }
 }
 
 .text {
+  @include body-m;
   margin: 20px;
+
+  @include tablet-landscape {
+    @include body-l;
+  }
+}
+
+.diagram {
+  max-width: 600px;
+  width: 100%;
 }
 
 .icons {
@@ -28,6 +43,7 @@
 }
 
 .iconWrapper {
+  @include body-xxs;
   @include centralize;
   flex-direction: column;
   row-gap: 12px;

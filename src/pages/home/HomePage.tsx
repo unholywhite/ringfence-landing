@@ -19,7 +19,7 @@ const HomePage: NextPage = () => {
         Ringfence Protocol is the data monetization layer for artificial
         intelligence.
       </p>
-      <Diagram />
+      <Diagram className={s.diagram} />
       <div className={s.icons}>
         {Object.keys(icons).map(icon => (
           <div key={icon} className={s.iconWrapper}>
