@@ -7,8 +7,7 @@ import {
   TERMS_LINK,
   X_LINK
 } from '@app/constants/navigation';
-import { Icon } from '@app/ui-kit';
-import { LinkWrapper } from '@app/ui-kit/LinkWrapper';
+import { Icon, LinkWrapper } from '@app/ui-kit';
 
 import s from './Footer.module.scss';
 

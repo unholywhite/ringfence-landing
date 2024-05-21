@@ -1,0 +1,168 @@
+@import "@styles/media";
+@import "@styles/mixins";
+@import "@styles/typography";
+
+.root {
+  @include side-paddings;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-bottom: 64px;
+  padding-top: 64px;
+  width: 100%;
+
+  @include tablet-landscape {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.header {
+  @include heading4;
+  line-height: 125%;
+  margin-bottom: 32px;
+  text-align: center;
+
+  @include tablet-landscape {
+    margin-bottom: 64px;
+  }
+}
+
+.partners {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+
+  @include tablet-portrait {
+    gap: 32px;
+  }
+
+  @include tablet-landscape {
+    gap: 24px;
+  }
+}
+
+.partner {
+  border: 1px solid var(--primary-green);
+  border-radius: 12px;
+  display: grid;
+  gap: 0;
+  grid-template-areas:
+    "logo"
+    "text";
+  grid-template-columns: 1fr;
+  grid-template-rows: 128px 1fr;
+  padding: 16px 16px 32px;
+  position: relative;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+
+  @include tablet-portrait {
+    grid-template-rows: 185px 1fr;
+  }
+
+  @include tablet-landscape {
+    align-items: center;
+    gap: 24px;
+    grid-template-areas: "logo text";
+    grid-template-columns: 3.4fr 4.5fr;
+    grid-template-rows: 1fr;
+    padding: 24px 24px 24px 6%;
+  }
+
+  @media (width > 1023px) {
+    background: var(--secondary-dark-green);
+    border-color: var(--secondary-dark-green);
+  }
+
+  @include desktop {
+    gap: 64px;
+    grid-template-columns: 4.9fr 4.5fr;
+    padding: 24px 184px;
+  }
+
+  &:hover {
+    @media (width > 1023px) {
+      background: var(--base-black);
+      border-color: var(--primary-green);
+
+      .icon {
+        color: var(--primary-green);
+      }
+
+      .text {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.icon {
+  display: none;
+
+  @include tablet-portrait {
+    color: var(--primary-green);
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: color 0.2s ease-in-out;
+  }
+
+  @include tablet-landscape {
+    height: 30px;
+    left: 3%;
+    right: unset;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+  }
+
+  @media (width > 1023px) {
+    color: var(--secondary-alt-green);
+  }
+
+  @include desktop {
+    height: 96px;
+    left: 44px;
+    transform: translateY(-50%);
+    width: 96px;
+  }
+}
+
+.logo {
+  @include centralize;
+  align-self: center;
+  grid-area: logo;
+  height: 83px;
+  position: relative;
+
+  @include tablet-portrait {
+    height: 124px;
+  }
+
+  @include desktop {
+    height: 96px;
+  }
+}
+
+.svgLogo {
+  height: 100%;
+  width: 100%;
+
+  @include tablet-landscape {
+    max-width: 475px;
+  }
+}
+
+.text {
+  @include body-s;
+  grid-area: text;
+  line-height: 150%;
+  transition: opacity 0.2s ease-in-out;
+
+  @media (width > 1023px) {
+    opacity: 0.6;
+  }
+}
