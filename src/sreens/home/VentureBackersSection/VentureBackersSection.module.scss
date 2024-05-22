@@ -1,0 +1,63 @@
+@import "@styles/media";
+@import "@styles/mixins";
+@import "@styles/typography";
+
+.root {
+  @include side-paddings;
+  padding-bottom: 64px;
+  padding-top: 64px;
+
+  @include tablet-landscape {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.header {
+  @include heading5;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.backers {
+  @include centralize;
+  column-gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 32px;
+
+  @include tablet-portrait {
+    column-gap: 18px;
+  }
+
+  @include tablet-landscape {
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+  }
+}
+
+.backer {
+  border: solid 1px var(--transparent-black);
+  height: 92px;
+  line-height: 0;
+  width: 164px;
+
+  @include tablet-landscape {
+    border-radius: 6px;
+    transition:
+      background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    @include tablet-landscape {
+      background: var(--secondary-dark-green);
+      border-color: var(--primary-green);
+    }
+  }
+}
+
+.logo {
+  height: 100%;
+}

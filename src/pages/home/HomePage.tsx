@@ -7,6 +7,7 @@ import Diagram from '@app/assets/images/diagram.svg';
 import Logo from '@app/assets/images/logo/logo.svg';
 import MainLayout from '@app/components/MainLayout';
 import { PartnersSection } from '@app/sreens/home/PartnersSection';
+import { VentureBackersSection } from '@app/sreens/home/VentureBackersSection';
 import { Icon, IconName } from '@app/ui-kit';
 
 import s from './HomePage.module.scss';
@@ -20,6 +21,7 @@ const HomePage: NextPage = () => {
         Ringfence Protocol is the data monetization layer for artificial
         intelligence.
       </p>
+      <VentureBackersSection />
       <PartnersSection />
       <Diagram className={s.diagram} />
       <div className={s.icons}>

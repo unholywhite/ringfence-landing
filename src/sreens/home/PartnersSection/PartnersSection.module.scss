@@ -54,9 +54,6 @@
   padding: 16px 16px 32px;
   position: relative;
   text-decoration: none;
-  transition:
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
 
   @include tablet-portrait {
     grid-template-rows: 185px 1fr;
@@ -74,6 +71,9 @@
   @media (width > 1023px) {
     background: var(--secondary-dark-green);
     border-color: var(--secondary-dark-green);
+    transition:
+      background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 
   @include desktop {
@@ -107,7 +107,6 @@
     position: absolute;
     right: 8px;
     top: 8px;
-    transition: color 0.2s ease-in-out;
   }
 
   @include tablet-landscape {
@@ -121,6 +120,7 @@
 
   @media (width > 1023px) {
     color: var(--secondary-alt-green);
+    transition: color 0.2s ease-in-out;
   }
 
   @include desktop {
@@ -160,9 +160,9 @@
   @include body-s;
   grid-area: text;
   line-height: 150%;
-  transition: opacity 0.2s ease-in-out;
 
   @media (width > 1023px) {
     opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
   }
 }
