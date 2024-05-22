@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       <div className={s.content}>
         <Logo />
         <div className={s.burgerContainer} onClick={toggleOpen}>
-          <Icon name="burger" className={s.burger} />
+          <Icon name={open ? 'closeMenu' : 'burger'} className={s.burger} />
         </div>
 
         <NavItems className={s.desktopNav} />
