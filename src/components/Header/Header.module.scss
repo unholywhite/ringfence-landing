@@ -12,7 +12,7 @@ $header-height: 80px;
 
   background-color: transparent;
   transition: background-color .4s;
-  z-index: 50;
+  z-index: var(--header-z-index);
 }
 
 .pinned {

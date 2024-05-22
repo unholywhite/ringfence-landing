@@ -1,0 +1,71 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  overflow: hidden;
+  position: relative;
+
+  border-radius: 12px;
+  border: 1px solid var(--primary-green);
+}
+
+.img {
+  width: 100%;
+}
+
+.overlay {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(0deg, #0C1E15 0%, rgb(12 30 21 / 0%) 100%);
+
+  @include tablet-landscape {
+    height: 75%;
+  }
+}
+
+.content {
+  max-width: 348px;
+  padding: 0 8px;
+
+  @include tablet-landscape {
+    max-width: 448px;
+  }
+}
+
+.title {
+  @include heading3;
+  margin-bottom: 8px;
+
+  @include tablet-landscape {
+    @include heading2;
+  }
+}
+
+.description {
+  @include body-xxs;
+  margin-bottom: 36px;
+
+  @include tablet-landscape {
+    @include body-s;
+  }
+}
+
+.btn {
+  width: 100%;
+
+  @include tablet-landscape {
+    max-width: 204px;
+  }
+}

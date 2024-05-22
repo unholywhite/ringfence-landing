@@ -3,6 +3,7 @@ import React from 'react';
 
 import icons from 'public/icons';
 
+import { RingfenceEcosystemProjectsSection } from '@app/ screens/home/RingfenceEcosystemProjectsSection';
 import Diagram from '@app/assets/images/diagram.svg';
 import Logo from '@app/assets/images/logo/logo.svg';
 import MainLayout from '@app/components/MainLayout';
@@ -26,6 +27,7 @@ const HomePage: NextPage = () => {
       <AngelsSection />
       <Diagram className={s.diagram} />
       <PartnersSection />
+      <RingfenceEcosystemProjectsSection />
       <div className={s.icons}>
         {Object.keys(icons).map(icon => (
           <div key={icon} className={s.iconWrapper}>
