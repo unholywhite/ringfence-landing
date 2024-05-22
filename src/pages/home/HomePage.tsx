@@ -1,41 +1,21 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-import icons from 'public/icons';
-
-import { RingfenceEcosystemProjectsSection } from '@app/ screens/home/RingfenceEcosystemProjectsSection';
-import Diagram from '@app/assets/images/diagram.svg';
-import Logo from '@app/assets/images/logo/logo.svg';
 import MainLayout from '@app/components/MainLayout';
-import { AngelsSection } from '@app/sreens/home/AngelsSection';
-import { PartnersSection } from '@app/sreens/home/PartnersSection';
-import { VentureBackersSection } from '@app/sreens/home/VentureBackersSection';
-import { Icon, IconName } from '@app/ui-kit';
-
-import s from './HomePage.module.scss';
+import { AngelsSection } from '@app/screens/home/AngelsSection';
+import { PartnersSection } from '@app/screens/home/PartnersSection';
+import { RingfenceEcosystemProjectsSection } from '@app/screens/home/RingfenceEcosystemProjectsSection';
+import { TeamSection } from '@app/screens/home/TeamSection';
+import { VentureBackersSection } from '@app/screens/home/VentureBackersSection';
 
 const HomePage: NextPage = () => {
   return (
-    <MainLayout className={s.root}>
-      <Logo className={s.logo} />
-      <h1 className={s.title}>Where Blockchain Meets AI</h1>
-      <p className={s.text}>
-        Ringfence Protocol is the data monetization layer for artificial
-        intelligence.
-      </p>
+    <MainLayout>
       <VentureBackersSection />
       <AngelsSection />
-      <Diagram className={s.diagram} />
       <PartnersSection />
       <RingfenceEcosystemProjectsSection />
-      <div className={s.icons}>
-        {Object.keys(icons).map(icon => (
-          <div key={icon} className={s.iconWrapper}>
-            <p>{icon}</p>
-            <Icon name={icon as IconName} title={icon} />
-          </div>
-        ))}
-      </div>
+      <TeamSection />
     </MainLayout>
   );
 };
