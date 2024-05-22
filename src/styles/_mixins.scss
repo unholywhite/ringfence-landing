@@ -78,3 +78,55 @@
     }
   }
 }
+
+@mixin custom-scrollbar-horizontal {
+  /* Turn on custom 4px wide scrollbar */
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    height: 2px;
+  }
+
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  &::-webkit-scrollbar:hover {
+    background-color: rgb(232 224 255 / 9%);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  &::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(232 224 255 / 61%);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal:active {
+    /* Some lighter color when you click it */
+    background-color: rgb(232 224 255 / 100%);
+    border-radius: 0;
+  }
+}
+
+@mixin custom-scrollbar-vertical {
+  /* Turn on custom 4px wide scrollbar */
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 0;
+    width: 2px;
+  }
+
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  &::-webkit-scrollbar:hover {
+    background-color: rgb(232 224 255 / 9%);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  &::-webkit-scrollbar-thumb:vertical {
+    background: rgb(232 224 255 / 61%);
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical:active {
+    /* Some lighter color when you click it */
+    background-color: rgb(232 224 255 / 100%);
+    border-radius: 0;
+  }
+}

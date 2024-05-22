@@ -18,3 +18,13 @@ export type TeamMember = {
   imageUrl: string;
   socials?: MemberSocials;
 };
+
+export type RoadmapMilestone = {
+  title: string;
+  link?: string;
+};
+
+export type RoadmapQuarter = {
+  quarter: string;
+  milestones: RoadmapMilestone[];
+};

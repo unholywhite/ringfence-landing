@@ -5,6 +5,7 @@ import MainLayout from '@app/components/MainLayout';
 import { AngelsSection } from '@app/screens/home/AngelsSection';
 import { PartnersSection } from '@app/screens/home/PartnersSection';
 import { RingfenceEcosystemProjectsSection } from '@app/screens/home/RingfenceEcosystemProjectsSection';
+import { RoadmapSection } from '@app/screens/home/RoadmapSection';
 import { TeamSection } from '@app/screens/home/TeamSection';
 import { VentureBackersSection } from '@app/screens/home/VentureBackersSection';
 
@@ -15,6 +16,7 @@ const HomePage: NextPage = () => {
       <AngelsSection />
       <PartnersSection />
       <RingfenceEcosystemProjectsSection />
+      <RoadmapSection />
       <TeamSection />
     </MainLayout>
   );

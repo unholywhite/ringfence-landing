@@ -1,0 +1,126 @@
+@import "@styles/media";
+@import "@styles/mixins";
+@import "@styles/typography";
+
+$vertical-scroll-padding: 128px;
+$side-cell-width: 80px;
+
+.root {
+  @include side-paddings;
+  padding-bottom: 64px;
+  padding-top: 64px;
+
+  @include tablet-landscape {
+    padding-top: 100px;
+  }
+}
+
+.header {
+  @include heading5;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.scrollContainer {
+  @include tablet-landscape {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      height: $vertical-scroll-padding;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+
+    &::before {
+      background: linear-gradient(180deg, var(--base-black) 0, var(--transparent-black) 100%);
+      top: 0;
+      z-index: 2;
+    }
+
+    &::after {
+      background: linear-gradient(180deg, var(--transparent-black) 0, var(--base-black) 100%);
+      bottom: 0;
+      z-index: 2;
+    }
+
+  }
+}
+
+.scrollWrapper {
+  @include tablet-landscape {
+    @include custom-scrollbar-vertical;
+    height: 640px;
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.roadmap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+  text-align: center;
+
+  @include tablet-landscape {
+    padding: $vertical-scroll-padding 0;
+    row-gap: 64px;
+  }
+}
+
+.quarter {
+  &:first-of-type {
+    .milestones {
+      font-size: 20px;
+
+      @include tablet-portrait {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include tablet-landscape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.quarterName {
+  @include heading2;
+  line-height: normal;
+
+  @include tablet-landscape {
+    width: $side-cell-width;
+  }
+}
+
+.milestones {
+  @include heading5;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  margin-top: 24px;
+  row-gap: 24px;
+
+  @include tablet-landscape {
+    margin-top: 18px;
+  }
+}
+
+.link {
+  color: var(--primary-green);
+}
+
+.filler {
+  @include tablet-landscape {
+    width: $side-cell-width;
+  }
+}
