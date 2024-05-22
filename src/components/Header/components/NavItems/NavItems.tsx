@@ -2,6 +2,8 @@ import React from 'react';
 
 import LinkWrapper from '@app/ui-kit/LinkWrapper/LinkWrapper';
 
+import s from './NavItems.module.scss';
+
 interface NavItemsProps {
   className?: string;
 }
@@ -11,10 +13,18 @@ export const NavItems = (props: NavItemsProps) => {
 
   return (
     <div className={className}>
-      <LinkWrapper href={'#'}>Nodes</LinkWrapper>
-      <LinkWrapper href={'#'}>Escher</LinkWrapper>
-      <LinkWrapper href={'#'}>Foundation</LinkWrapper>
-      <LinkWrapper href={'#'}>About</LinkWrapper>
+      <LinkWrapper href={'#'} className={s.nav}>
+        Nodes
+      </LinkWrapper>
+      <LinkWrapper href={'#'} className={s.nav}>
+        Escher
+      </LinkWrapper>
+      <LinkWrapper href={'#'} className={s.nav}>
+        Foundation
+      </LinkWrapper>
+      <LinkWrapper href={'#'} className={s.nav}>
+        About
+      </LinkWrapper>
     </div>
   );
 };

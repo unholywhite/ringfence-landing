@@ -1,0 +1,7 @@
+.nav {
+  transition: .4s;
+
+  &:hover {
+    color: var(--primary-green);
+  }
+}
