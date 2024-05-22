@@ -6,6 +6,7 @@ import icons from 'public/icons';
 import Diagram from '@app/assets/images/diagram.svg';
 import Logo from '@app/assets/images/logo/logo.svg';
 import MainLayout from '@app/components/MainLayout';
+import { AngelsSection } from '@app/sreens/home/AngelsSection';
 import { PartnersSection } from '@app/sreens/home/PartnersSection';
 import { VentureBackersSection } from '@app/sreens/home/VentureBackersSection';
 import { Icon, IconName } from '@app/ui-kit';
@@ -22,8 +23,9 @@ const HomePage: NextPage = () => {
         intelligence.
       </p>
       <VentureBackersSection />
-      <PartnersSection />
+      <AngelsSection />
       <Diagram className={s.diagram} />
+      <PartnersSection />
       <div className={s.icons}>
         {Object.keys(icons).map(icon => (
           <div key={icon} className={s.iconWrapper}>
