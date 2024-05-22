@@ -1,0 +1,33 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  @include heading4;
+
+  padding: 24px;
+  min-height: 110px;
+  border-radius: 12px;
+
+  color: var(--base-black);
+  background-color: var(--primary-green);
+
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet-landscape {
+    @include heading2;
+    flex-direction: row;
+  }
+}
+
+.btn {
+  width: 300px;
+
+  @include tablet-landscape {
+    width: 205px;
+  }
+}

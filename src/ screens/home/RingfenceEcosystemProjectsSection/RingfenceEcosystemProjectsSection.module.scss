@@ -1,0 +1,47 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  @include side-paddings;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1000px;
+}
+
+.title {
+  @include heading4;
+
+  margin: 64px 0;
+  text-align: center;
+
+  @include tablet-portrait {
+    margin: 64px 0 32px;
+  }
+
+  @include tablet-landscape {
+    @include heading2;
+    margin: 100px 0 94px;
+  }
+
+  @include desktop {
+    margin: 100px 0 57px;
+  }
+}
+
+.tiles {
+  gap: 32px;
+  display: grid;
+  grid-auto-rows: 256px;
+  margin-top: 32px;
+
+  @include tablet-landscape {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.earlyAccess {
+  margin-top: 32px;
+}
