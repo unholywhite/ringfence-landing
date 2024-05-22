@@ -68,7 +68,7 @@
     padding: 24px 24px 24px 6%;
   }
 
-  @media (width > 1023px) {
+  @include desktop-sm {
     background: var(--secondary-dark-green);
     border-color: var(--secondary-dark-green);
     transition:
@@ -83,7 +83,7 @@
   }
 
   &:hover {
-    @media (width > 1023px) {
+    @include desktop-sm {
       background: var(--base-black);
       border-color: var(--primary-green);
 
@@ -109,7 +109,7 @@
     top: 8px;
   }
 
-  @include tablet-landscape {
+  @include tablet-landscape { 
     height: 30px;
     left: 3%;
     right: unset;
@@ -118,7 +118,7 @@
     width: 30px;
   }
 
-  @media (width > 1023px) {
+  @include desktop-sm {
     color: var(--secondary-alt-green);
     transition: color 0.2s ease-in-out;
   }
@@ -161,7 +161,7 @@
   grid-area: text;
   line-height: 150%;
 
-  @media (width > 1023px) {
+  @include desktop-sm {
     opacity: 0.6;
     transition: opacity 0.2s ease-in-out;
   }

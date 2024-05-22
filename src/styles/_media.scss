@@ -7,6 +7,9 @@ $breakpoint-sm: 640;
 // tablet-landscape >=
 $breakpoint-md: 960;
 
+// tablet-landscape >=
+$breakpoint-mx: 1024;
+
 // desktop >=
 $breakpoint-lg: 1440;
 
@@ -25,6 +28,12 @@ $breakpoint-lg: 1440;
 
 @mixin tablet-landscape {
   @media (min-width: #{$breakpoint-md}px) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (min-width: #{$breakpoint-mx}px) {
     @content;
   }
 }
