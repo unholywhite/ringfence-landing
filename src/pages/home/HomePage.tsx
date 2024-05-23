@@ -3,6 +3,7 @@ import React from 'react';
 
 import MainLayout from '@app/components/MainLayout';
 import { AngelsSection } from '@app/screens/home/AngelsSection';
+import { DecentralizedAiSection } from '@app/screens/home/DecentralizedAiSection';
 import { DiagramSection } from '@app/screens/home/DiagramSection';
 import { GreetingSection } from '@app/screens/home/GreetingSection';
 import { PartnersSection } from '@app/screens/home/PartnersSection';
@@ -20,6 +21,7 @@ const HomePage: NextPage = () => {
       <DiagramSection />
       <PartnersSection />
       <RingfenceEcosystemProjectsSection />
+      <DecentralizedAiSection />
       <RoadmapSection />
       <TeamSection />
     </MainLayout>
