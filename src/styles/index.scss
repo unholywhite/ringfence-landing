@@ -31,3 +31,7 @@ body {
   transition: transform 0.3s ease;
   width: 100%;
 }
+
+.Toastify__close-button--light {
+  color: var(--base-white);
+}

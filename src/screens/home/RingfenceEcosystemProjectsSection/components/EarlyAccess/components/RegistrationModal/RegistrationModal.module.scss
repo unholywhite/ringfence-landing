@@ -1,0 +1,51 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: var(--modal-z-index);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background-color: var(--transparent-dark-green-80);
+}
+
+.modal {
+  border-radius: 12px;
+  background-color: var(--woodsmoke);
+
+  padding: 24px 20px;
+
+  @include tablet-portrait {
+    padding: 24px 40px;
+    border: 1px solid var(--primary-green);
+  }
+}
+
+.form {
+  gap: 20px;
+  display: grid;
+  min-width: 348px;
+
+  position: relative;
+}
+
+.title {
+  @include heading5;
+  margin-bottom: 20px;
+}
+
+.submit {
+  width: 100%;
+}
+
+
+

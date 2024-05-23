@@ -28,3 +28,12 @@ export type RoadmapQuarter = {
   quarter: string;
   milestones: RoadmapMilestone[];
 };
+
+export type ContactInfo = {
+  name: string;
+  title: string;
+  email: string;
+  website: string;
+};
+
+export type ContactErrors = Partial<Record<keyof ContactInfo, string>>;
