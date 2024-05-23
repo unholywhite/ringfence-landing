@@ -1,0 +1,65 @@
+@import "@styles/media";
+@import "@styles/mixins";
+
+.root {
+  @include side-paddings;
+
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include tablet-portrait {
+    flex-direction: row;
+  }
+
+  @include tablet-landscape {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+}
+
+.diagram {
+  width: 348px;
+  height: 348px;
+
+  @include tablet-landscape {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.scheme {
+  width: 208px;
+  display: none;
+
+  @include tablet-portrait {
+    width: unset;
+    height: 600px;
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.schemeWide {
+  width: 348px;
+  display: block;
+
+  @include tablet-portrait {
+    display: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
+}

@@ -3,6 +3,7 @@ import React from 'react';
 
 import MainLayout from '@app/components/MainLayout';
 import { AngelsSection } from '@app/screens/home/AngelsSection';
+import { DiagramSection } from '@app/screens/home/DiagramSection';
 import { PartnersSection } from '@app/screens/home/PartnersSection';
 import { RingfenceEcosystemProjectsSection } from '@app/screens/home/RingfenceEcosystemProjectsSection';
 import { RoadmapSection } from '@app/screens/home/RoadmapSection';
@@ -14,6 +15,7 @@ const HomePage: NextPage = () => {
     <MainLayout>
       <VentureBackersSection />
       <AngelsSection />
+      <DiagramSection />
       <PartnersSection />
       <RingfenceEcosystemProjectsSection />
       <RoadmapSection />
