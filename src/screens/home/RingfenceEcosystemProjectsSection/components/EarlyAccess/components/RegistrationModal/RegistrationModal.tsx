@@ -1,10 +1,17 @@
 import isEmpty from 'lodash/isEmpty';
-import { SyntheticEvent, useCallback, useEffect, useState } from 'react';
+import {
+  SyntheticEvent,
+  useCallback,
+  useEffect,
+  useState,
+  MouseEvent
+} from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'react-toastify';
 
 import { usePreventBodyScroll } from '@app/hooks/usePreventBodyScroll';
 import { ContactErrors } from '@app/types';
+import { Icon } from '@app/ui-kit';
 import { Button } from '@app/ui-kit/Button';
 import { Input } from '@app/ui-kit/Input';
 import { validateContactInfo } from '@app/utils/validateContactInfo';
@@ -37,7 +44,10 @@ export const RegistrationModal = (props: RegistrationModalProps) => {
     toggleOpen(false);
   }, []);
 
-  const stopPropagation = useCallback(e => e.stopPropagation(), []);
+  const stopPropagation = useCallback(
+    (e: MouseEvent<HTMLElement>) => e.stopPropagation(),
+    []
+  );
 
   const onSubmit = useCallback(
     async (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
@@ -63,6 +73,8 @@ export const RegistrationModal = (props: RegistrationModalProps) => {
           cleanupForm(form);
 
           toast('Form sent successfully!');
+
+          closeModal();
         } catch (e) {
           toast('Error occurred. Try again later.', {
             type: 'error'
@@ -81,24 +93,22 @@ export const RegistrationModal = (props: RegistrationModalProps) => {
   return createPortal(
     <div className={s.root} onClick={closeModal}>
       <div className={s.modal} onClick={stopPropagation}>
-        <div className={s.img} />
-        <div>
-          <div className={s.title}>Register for early access</div>
-          <form className={s.form} onSubmit={onSubmit}>
-            <Input name="name" label="Your Name" error={errors.name} />
-            <Input name="title" label="Title" error={errors.title} />
-            <Input
-              name="email"
-              label="Email"
-              type="email"
-              error={errors.email}
-            />
-            <Input name="website" label="Website" error={errors.website} />
-            <Button type="submit" variant="primary" className={s.submit}>
-              Submit
-            </Button>
-          </form>
+        <div className={s.close} onClick={closeModal}>
+          <Icon name="closeModal" className={s.closeIcon} />
         </div>
+
+        <div className={s.img} />
+
+        <form className={s.form} onSubmit={onSubmit}>
+          <div className={s.title}>Register for early access</div>
+          <Input name="name" label="Your Name" error={errors.name} />
+          <Input name="title" label="Title" error={errors.title} />
+          <Input name="email" label="Email" type="email" error={errors.email} />
+          <Input name="website" label="Website" error={errors.website} />
+          <Button type="submit" variant="primary" className={s.submit}>
+            Submit
+          </Button>
+        </form>
       </div>
     </div>,
     el

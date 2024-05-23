@@ -19,14 +19,46 @@
 }
 
 .modal {
+  display: flex;
   border-radius: 12px;
   background-color: var(--woodsmoke);
 
-  padding: 24px 20px;
+  position: relative;
 
   @include tablet-portrait {
-    padding: 24px 40px;
     border: 1px solid var(--primary-green);
+  }
+}
+
+.close {
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+
+  padding: 24px;
+}
+
+.closeIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.img {
+  width: 0;
+  min-height: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('/images/home/registration.png');
+
+  @include tablet-portrait {
+    width: 172px;
+  }
+
+  @include tablet-landscape {
+    width: 438px;
   }
 }
 
@@ -34,8 +66,14 @@
   gap: 20px;
   display: grid;
   min-width: 348px;
+  padding: 24px 20px;
 
   position: relative;
+
+  @include tablet-portrait {
+    min-width: 438px;
+    padding: 24px 40px;
+  }
 }
 
 .title {
