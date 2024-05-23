@@ -10,6 +10,7 @@ import NxGen from '@app/assets/images/investors/nxgen.svg';
 import Optimista from '@app/assets/images/investors/optimista.svg';
 import RareStone from '@app/assets/images/investors/rarestone.svg';
 import Spark from '@app/assets/images/investors/spark.svg';
+import { SectionTitle } from '@app/components/SectionTitle/SectionTitle';
 import { LinkWrapper } from '@app/ui-kit';
 
 import s from './VentureBackersSection.module.scss';
@@ -17,7 +18,7 @@ import s from './VentureBackersSection.module.scss';
 export const VentureBackersSection = () => {
   return (
     <section className={s.root}>
-      <h2 className={s.header}>Venture Backers</h2>
+      <SectionTitle className={s.header}>Venture Backers</SectionTitle>
       <div className={s.backers}>
         <LinkWrapper
           href="https://morningstar.ventures/"

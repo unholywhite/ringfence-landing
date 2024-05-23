@@ -1,0 +1,70 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.content {
+  @include centralize;
+  column-gap: 6px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.header {
+  @include heading5;
+  flex-shrink: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.left,
+.right {
+  height: 7px;
+  position: relative;
+  width: 50%;
+
+  &::before {
+    background: var(--primary-green);
+    border-radius: 7px;
+    content: '';
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.left {
+  &::before,
+  &::after {
+    right: 0;
+  }
+
+  &::after {
+    background: linear-gradient(-90deg, var(--primary-green) 0, var(--transparent-black) 100%);
+  }
+}
+
+.right {
+  &::before,
+  &::after  {
+    left: 0;
+  }
+
+  &::after {
+    background: linear-gradient(90deg, var(--primary-green) 0, var(--transparent-black) 100%);
+  }
+}

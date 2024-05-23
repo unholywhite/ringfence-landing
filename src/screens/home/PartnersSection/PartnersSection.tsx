@@ -1,17 +1,25 @@
 import React from 'react';
+import { useMedia } from 'react-use';
 
 import Arweave from '@app/assets/images/partners/arweave.svg';
 import LayerZero from '@app/assets/images/partners/layer-zero.svg';
 import LeonardoAi from '@app/assets/images/partners/leonardo-ai.svg';
 import Tada from '@app/assets/images/partners/tada.svg';
+import { SectionTitle } from '@app/components/SectionTitle/SectionTitle';
 import { Icon, LinkWrapper } from '@app/ui-kit';
 
 import s from './PartnersSection.module.scss';
 
 export const PartnersSection = () => {
+  const isMobile = useMedia('(max-width: 639px)', false);
+
   return (
     <section className={s.root}>
-      <h2 className={s.header}>Partners</h2>
+      {isMobile ? (
+        <h2 className={s.header}>Partners</h2>
+      ) : (
+        <SectionTitle className={s.header}>Partners</SectionTitle>
+      )}
       <div className={s.partners}>
         <LinkWrapper
           href="https://leonardo.ai/"
