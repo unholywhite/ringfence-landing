@@ -1,0 +1,85 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  height: 800px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet-portrait {
+    overflow: visible;
+  }
+}
+
+.content {
+  @include heading3;
+
+  text-align: center;
+
+  z-index: 2;
+  position: relative;
+
+  .ringfenceIt {
+    color: var(--primary-green);
+    margin-bottom: 24px;
+  }
+
+  .description {
+    @include body-m;
+  }
+
+  @include tablet-landscape {
+    @include heading1;
+
+    .description {
+      @include body-l;
+    }
+  }
+}
+
+.circles {
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.glow {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}
+
+.left {
+  top: 50px;
+  left: -112px;
+
+  width: 500px;
+  height: 500px;
+}
+
+.bottom {
+  left: 50%;
+  bottom: 0;
+}
+
+.top {
+  top: -300px;
+  right: -300px;
+  width: 600px;
+  height: 600px;
+}

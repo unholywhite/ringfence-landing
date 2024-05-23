@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <ToastContainer limit={3} />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 };
