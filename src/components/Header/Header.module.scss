@@ -7,8 +7,9 @@ $header-height: 80px;
 .root {
   @include body-xxs;
 
-  top: -1px;
-  position: sticky;
+  top: 0;
+  width: 100%;
+  position: fixed;
 
   background-color: transparent;
   transition: background-color .4s;
@@ -33,7 +34,7 @@ $header-height: 80px;
   align-items: center;
   justify-content: space-between;
 
-  @include desktop {
+  @include tablet-landscape {
     padding: 0 34px;
   }
 }
@@ -41,15 +42,15 @@ $header-height: 80px;
 .burgerContainer {
   padding: 16px;
   line-height: 0;
+
+  @include tablet-landscape {
+    display: none;
+  }
 }
 
 .burger {
   width: 32px;
   height: 32px;
-
-  @include tablet-landscape {
-    display: none;
-  }
 }
 
 .dropdown {

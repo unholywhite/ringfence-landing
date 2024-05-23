@@ -1,10 +1,11 @@
 import cn from 'classnames';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useToggle } from 'react-use';
 
 import Logo from '@app/assets/images/logo/logo.svg';
 import { NavItems } from '@app/components/Header/components/NavItems';
 import { useOnClickOutside } from '@app/hooks/useOnClickOutside';
+import { useOnWindowScroll } from '@app/hooks/useOnWindowScroll';
 import { Icon } from '@app/ui-kit';
 import { AnimateHeight } from '@app/ui-kit/AnimateHeight';
 
@@ -20,18 +21,11 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   const [open, toggleOpen] = useToggle(false);
   const [pinned, setPinned] = useState(false);
 
-  useEffect(() => {
-    const rootEl = rootRef.current;
+  const onScroll = useCallback(() => {
+    setPinned(window.scrollY !== 0);
+  }, []);
 
-    if (rootEl) {
-      const observer = new IntersectionObserver(
-        ([e]) => setPinned(e.intersectionRatio < 1),
-        { threshold: [1] }
-      );
-
-      observer.observe(rootEl);
-    }
-  }, [rootRef]);
+  useOnWindowScroll({ callback: onScroll });
 
   const closePopup = useCallback(() => toggleOpen(false), []);
 
