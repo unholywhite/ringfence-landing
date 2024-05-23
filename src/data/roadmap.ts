@@ -12,7 +12,7 @@ export const roadmapData: RoadmapQuarter[] = [
       },
       {
         title: 'Complex Digital Assets Litepaper',
-        link: '#'
+        link: 'https://www.ringfence.ai/blog/litepaper'
       }
     ]
   },
@@ -21,7 +21,7 @@ export const roadmapData: RoadmapQuarter[] = [
     milestones: [
       {
         title: 'Ringfence Foundation',
-        link: '#'
+        link: 'https://ringfence.org/'
       },
       {
         title: 'Escher Launch'
