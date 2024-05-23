@@ -1,0 +1,89 @@
+@import '@styles/mixins';
+@import "@styles/media";
+@import '@styles/typography';
+
+.root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: var(--modal-z-index);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background-color: var(--transparent-dark-green-80);
+}
+
+.modal {
+  display: flex;
+  border-radius: 12px;
+  background-color: var(--woodsmoke);
+
+  position: relative;
+
+  @include tablet-portrait {
+    border: 1px solid var(--primary-green);
+  }
+}
+
+.close {
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+
+  padding: 24px;
+}
+
+.closeIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.img {
+  width: 0;
+  min-height: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('/images/home/registration.png');
+
+  @include tablet-portrait {
+    width: 172px;
+  }
+
+  @include tablet-landscape {
+    width: 438px;
+  }
+}
+
+.form {
+  gap: 20px;
+  display: grid;
+  min-width: 348px;
+  padding: 24px 20px;
+
+  position: relative;
+
+  @include tablet-portrait {
+    min-width: 438px;
+    padding: 24px 40px;
+  }
+}
+
+.title {
+  @include heading5;
+  margin-bottom: 20px;
+}
+
+.submit {
+  width: 100%;
+}
+
+
+

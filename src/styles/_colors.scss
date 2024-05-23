@@ -19,7 +19,14 @@
 
   // Transparent
   --transparent-dark-green-50: rgb(12 30 21 / 50%);
+  --transparent-dark-green-80: rgb(12 30 21 / 80%);
   --transparent-dark-green-90: rgb(12 30 21 / 90%);
   --transparent-white-10: rgb(255 255 255 / 10%);
   --transparent-black: rgb(12 13 14 / 0%);
+  --error: #DC4A4A;
+  --woodsmoke: #191A1A;
+  --toastify-color-light: var(--grayscale-10);
+  --toastify-text-color-light: var(--base-white);
+  --toastify-color-progress-error: var(--error);
+  --toastify-color-progress-light: var(--primary-green);
 }
