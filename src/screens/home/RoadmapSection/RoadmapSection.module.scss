@@ -16,9 +16,7 @@ $side-cell-width: 80px;
 }
 
 .header {
-  @include heading5;
   margin-bottom: 32px;
-  text-align: center;
 }
 
 .scrollContainer {

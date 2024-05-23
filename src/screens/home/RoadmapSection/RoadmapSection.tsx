@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { SectionTitle } from '@app/components/SectionTitle/SectionTitle';
 import { roadmapData } from '@app/data/roadmap';
 import { Icon, LinkWrapper } from '@app/ui-kit';
 
@@ -8,7 +9,7 @@ import s from './RoadmapSection.module.scss';
 export const RoadmapSection = () => {
   return (
     <section className={s.root}>
-      <h2 className={s.header}>2024 Roadmap</h2>
+      <SectionTitle className={s.header}>2024 Roadmap</SectionTitle>
       <div className={s.scrollContainer}>
         <div className={s.scrollWrapper}>
           <div className={s.roadmap}>

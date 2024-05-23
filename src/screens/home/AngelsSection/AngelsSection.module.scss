@@ -10,11 +10,6 @@
   }
 }
 
-.header {
-  @include heading5;
-  text-align: center;
-}
-
 .angels {
   column-gap: 3px;
   display: flex;

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Marquee from 'react-fast-marquee';
 
+import { SectionTitle } from '@app/components/SectionTitle/SectionTitle';
 import { angels } from '@app/data/angels';
 import { LinkWrapper } from '@app/ui-kit';
 
@@ -37,7 +38,7 @@ export const AngelsSection = () => {
                 </LinkWrapper>
               ))}
             </Marquee>
-            {index === 0 && <h2 className={s.header}>Angels</h2>}
+            {index === 0 && <SectionTitle>Angels</SectionTitle>}
           </Fragment>
         ))}
       </div>
