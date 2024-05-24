@@ -6,10 +6,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { ContactInfo } from '@app/types';
 import { validateContactInfo } from '@app/utils/validateContactInfo';
 
-const GOOGLE_CLIENT_EMAIL = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL;
+const GOOGLE_CLIENT_EMAIL = process.env.GOOGLE_CLIENT_EMAIL;
 const GOOGLE_SERVICE_PRIVATE_KEY = process.env.GOOGLE_SERVICE_PRIVATE_KEY;
-const SHEET_ID = process.env.NEXT_PUBLIC_SHEET_ID || '0';
-const SPREADSHEET_ID = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
+const SHEET_ID = process.env.GOOGLE_SHEET_ID || '0';
+const SPREADSHEET_ID = process.env.GOOGLE_SPREADSHEET_ID;
 
 const doc = new GoogleSpreadsheet(
   SPREADSHEET_ID || '',
