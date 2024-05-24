@@ -1,4 +1,4 @@
-import { Form } from '@app/ screens/home/RingfenceEcosystemProjectsSection/components/EarlyAccess/components/RegistrationModal/types';
+import { Form } from '@app/screens/home/RingfenceEcosystemProjectsSection/components/EarlyAccess/components/RegistrationModal/types';
 
 export function cleanupForm(form: Form) {
   form.name.value = '';
