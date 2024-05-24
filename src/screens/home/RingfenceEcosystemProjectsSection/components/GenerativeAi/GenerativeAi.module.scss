@@ -3,11 +3,20 @@
 @import '@styles/typography';
 
 .root {
-  overflow: hidden;
   position: relative;
 
   border-radius: 12px;
   border: 1px solid var(--primary-green);
+  margin-bottom: 90px;
+
+  @include tablet-portrait {
+    margin-bottom: 0;
+  }
+}
+
+.imgContainer {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .img {
@@ -28,6 +37,7 @@
   align-items: center;
   justify-content: center;
 
+  border-radius: 12px;
   background: linear-gradient(0deg, #0C1E15 0%, rgb(12 30 21 / 0%) 100%);
 
   @include tablet-landscape {
@@ -38,6 +48,14 @@
 .content {
   max-width: 348px;
   padding: 0 8px;
+
+  bottom: -68px;
+  position: absolute;
+
+  @include tablet-portrait {
+    bottom: unset;
+    position: relative;
+  }
 
   @include tablet-landscape {
     max-width: 448px;

@@ -20,16 +20,24 @@ const Footer: FC<FooterProps> = ({ className }) => {
     <div className={cn(s.root, className)}>
       <div className={s.content}>
         <div className={s.nav}>
-          <LinkWrapper href={PARTNERS_LINK} isExternal>
+          <LinkWrapper href={PARTNERS_LINK} isExternal className={s.navItem}>
             Partners
           </LinkWrapper>
-          <LinkWrapper href={TERMS_LINK} isExternal>
+          <LinkWrapper href={TERMS_LINK} isExternal className={s.navItem}>
             Terms
           </LinkWrapper>
-          <LinkWrapper href={DISCORD_LINK} isExternal className={s.social}>
+          <LinkWrapper
+            href={DISCORD_LINK}
+            isExternal
+            className={cn(s.social, s.navItem)}
+          >
             <Icon name="socialDiscord" />
           </LinkWrapper>
-          <LinkWrapper href={X_LINK} isExternal className={s.social}>
+          <LinkWrapper
+            href={X_LINK}
+            isExternal
+            className={cn(s.social, s.navItem)}
+          >
             <Icon name="socialX" />
           </LinkWrapper>
         </div>

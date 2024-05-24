@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DecentralizedAi from '@app/assets/images/decentralized-ai.svg';
+import { NODES_LINK } from '@app/constants/navigation';
 import { LinkWrapper } from '@app/ui-kit';
 import { Button } from '@app/ui-kit/Button';
 
@@ -37,7 +38,7 @@ export const DecentralizedAiSection = () => {
           allowing anyone to run a decentralized validator node and participate
           in the upside of AI.
         </p>
-        <LinkWrapper href="#" isExternal>
+        <LinkWrapper href={NODES_LINK} isExternal>
           <Button className={s.link}>Register for Node Sale</Button>
         </LinkWrapper>
       </div>
