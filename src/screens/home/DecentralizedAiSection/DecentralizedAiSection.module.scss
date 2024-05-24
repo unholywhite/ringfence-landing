@@ -148,13 +148,11 @@ $max-diagram-width: 800px;
   background: linear-gradient(90deg, var(--primary-green) 0, var(--secondary-green) 100%);
   background-clip: text;
   line-height: normal;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   @media (width >= $max-diagram-width) {
     background: none;
     background-clip: unset;
-    -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
   }
 }
@@ -185,6 +183,7 @@ $max-diagram-width: 800px;
   from{
     transform: rotate(0deg);
   }
+
   to{
     transform: rotate(360deg);
   }
