@@ -39,3 +39,11 @@
   opacity: 0.6;
   text-align: center;
 }
+
+.navItem {
+  transition: .4s;
+
+  &:hover {
+    color: var(--primary-green);
+  }
+}

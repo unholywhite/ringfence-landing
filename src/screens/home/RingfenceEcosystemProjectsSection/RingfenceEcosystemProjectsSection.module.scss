@@ -5,10 +5,7 @@
 .root {
   @include side-paddings;
 
-  margin: 0 auto;
-
-  width: 100%;
-  max-width: 1000px;
+  position: relative;
 
   padding-top: 64px;
   padding-bottom: 64px;
@@ -17,6 +14,16 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+}
+
+.content {
+  z-index: 1;
+  position: relative;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1000px;
 }
 
 .title {
@@ -52,4 +59,30 @@
 
 .earlyAccess {
   margin-top: 32px;
+}
+
+.glowCirlce {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+
+  display: none;
+
+  @include tablet-landscape {
+    display: block;
+  }
+}
+
+.left {
+  top: 100px;
+  left: -400px;
+}
+
+.right {
+  bottom: 100px;
+  right: -400px;
+}
+
+.glow {
+  opacity: .4;
 }
