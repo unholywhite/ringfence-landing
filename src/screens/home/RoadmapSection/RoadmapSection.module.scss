@@ -28,6 +28,7 @@ $side-cell-width: 80px;
       content: '';
       height: $vertical-scroll-padding;
       left: 0;
+      pointer-events: none;
       position: absolute;
       right: 0;
     }

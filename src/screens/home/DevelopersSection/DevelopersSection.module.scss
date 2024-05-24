@@ -1,0 +1,89 @@
+@import "@styles/media";
+@import "@styles/mixins";
+@import "@styles/typography";
+
+.root {
+  @include side-paddings;
+  padding-bottom: 64px;
+  padding-top: 64px;
+
+  @include tablet-landscape {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.header {
+  margin-bottom: 32px;
+
+  @include tablet-landscape {
+    margin-bottom: 64px;
+  }
+
+  span {
+    display: block;
+
+    @include tablet-portrait {
+      display: inline;
+    }
+  }
+}
+
+.developers {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet-portrait {
+    align-items: flex-start;
+    column-gap: 40px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.developer {
+  flex-shrink: 0;
+  height: 132px;
+
+  @include tablet-portrait {
+    height: 100px;
+    width: 203px;
+  }
+
+  @include tablet-landscape {
+    width: 266px;
+    height: 132px;
+  }
+}
+
+.mid {
+  @include heading1;
+  color: var(--secondary-dark-green);
+  font-variant-numeric: stacked-fractions;
+  font-feature-settings: 'case' on;
+  height: 90px;
+  line-height: normal;
+
+  @include tablet-portrait {
+    height: unset;
+  }
+
+  @include tablet-landscape {
+    font-size: 96px;
+    font-weight: 400;
+    text-align: center;
+    width: 80px;
+  }
+}
+
+.arrow {
+  display: none;
+
+  @include tablet-landscape {
+    @include heading1;
+    color: var(--secondary-dark-green);
+    display: block;
+    font-size: 96px;
+  }
+}
