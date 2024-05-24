@@ -8,7 +8,7 @@ interface SectionTitleProps extends PropsWithChildren {
   headerClassName?: string;
 }
 
-export const SectionTitle = (props: SectionTitleProps) => {
+const SectionTitle = (props: SectionTitleProps) => {
   const { className, headerClassName, children } = props;
 
   return (
@@ -21,3 +21,5 @@ export const SectionTitle = (props: SectionTitleProps) => {
     </div>
   );
 };
+
+export default SectionTitle;
