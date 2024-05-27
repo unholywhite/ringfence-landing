@@ -52,7 +52,7 @@
 }
 
 .schemeWide {
-  width: 348px;
+  min-width: 380px;
   display: block;
 
   @include tablet-portrait {
