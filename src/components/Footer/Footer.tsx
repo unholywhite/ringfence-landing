@@ -23,7 +23,7 @@ const Footer: FC<FooterProps> = ({ className }) => {
           <LinkWrapper href={PARTNERS_LINK} isExternal className={s.navItem}>
             Partners
           </LinkWrapper>
-          <LinkWrapper href={TERMS_LINK} isExternal className={s.navItem}>
+          <LinkWrapper href={TERMS_LINK} className={s.navItem}>
             Terms
           </LinkWrapper>
           <LinkWrapper

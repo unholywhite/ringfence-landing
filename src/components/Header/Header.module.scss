@@ -2,8 +2,6 @@
 @import "@styles/media";
 @import '@styles/typography';
 
-$header-height: 80px;
-
 .root {
   @include body-xxs;
 
@@ -27,7 +25,7 @@ $header-height: 80px;
 .content {
   margin: 0 auto;
   max-width: 1000px;
-  height: $header-height;
+  height: var(--header-height);
   padding-left: 16px;
 
   display: flex;
@@ -77,6 +75,6 @@ $header-height: 80px;
   display: grid;
 
   text-align: center;
-  padding: $header-height + 32px 0 32px;
+  padding: calc(var(--header-height) + 32px) 0 32px;
   border-bottom: 1px solid var(--primary-green);
 }
