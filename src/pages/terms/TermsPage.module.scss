@@ -1,0 +1,39 @@
+@import "@styles/media";
+@import "@styles/mixins";
+@import "@styles/typography";
+
+.root {
+  @include body-s;
+  @include side-paddings;
+  text-align: justify;
+
+  margin: 0 auto;
+  max-width: 1000px;
+
+  padding-bottom: var(--header-height);
+  padding-top: calc(var(--header-height) + 32px);
+}
+
+.top {
+  text-align: right;
+}
+
+.h3 {
+  @include heading3;
+  text-align: center;
+  margin: 48px 0 24px;
+}
+
+.h4 {
+  @include heading4;
+  margin: 24px 0 12px;
+}
+
+.paragraph {
+  margin: 12px 0;
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
