@@ -29,10 +29,11 @@ export const teamData: TeamMember[] = [
     text: 'Crypto veteran with experience in investment, advisory and incubation spanning 7 years. Over $15m deployed and $100m raised. Charles has assisted multiple successful crypto unicorn launches and been early to support and build multiple crypto ecosystems as both an angel and institutional investor. Forbes Under 30 Europe.',
     imageUrl: '/images/team/read-c.jpg',
     socials: {
-      twitter: 'https://www.x.com/',
-      linkedin: 'https://www.linkedin.com/'
+      twitter: 'https://x.com/chatwithcharles',
+      linkedin: 'https://www.linkedin.com/in/charlesjread/'
     }
   },
+  /*
   {
     id: 4,
     name: 'Anthony',
@@ -55,11 +56,16 @@ export const teamData: TeamMember[] = [
       linkedin: 'https://www.linkedin.com/'
     }
   },
+*/
   {
     id: 6,
     name: 'Harry Read',
     position: 'Communications Manager',
     text: "Harry is a lifelong technophile specializing in communications and content strategy. With extensive experience working closely with startup founders, Harry leverages his knowledge in DeFi, AI and the spatial web to drive growth and deliver impact in emerging technology sectors. His contributions have elevated brands such as BMW, Cartier, and Macy's, as well as myriad Web3-native companies from blockchain games to DeFi protocols.",
-    imageUrl: '/images/team/read-h.jpg'
+    imageUrl: '/images/team/read-h.jpg',
+    socials: {
+      twitter: 'https://x.com/HydraRare',
+      linkedin: 'https://www.linkedin.com/in/harry-r-750a80237/'
+    }
   }
 ];
