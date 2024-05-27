@@ -9,6 +9,7 @@
 }
 
 .container {
+  @include side-paddings;
   height: 800px;
   max-width: 1000px;
   margin: 0 auto;
@@ -25,7 +26,7 @@
 }
 
 .content {
-  @include heading3;
+  @include heading4;
 
   text-align: center;
 
@@ -39,6 +40,10 @@
 
   .description {
     @include body-m;
+  }
+
+  @include tablet-portrait {
+    @include heading3;
   }
 
   @include tablet-landscape {

@@ -4,7 +4,7 @@
 
 .root {
   @include side-paddings;
-
+  overflow: hidden;
   position: relative;
 
   padding-top: 64px;
